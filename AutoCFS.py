@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import csv
 
-with open("C:\Users\\brd65\Desktop\\majestic_million.csv", "rb") as data:
+with open("C:\Users\\<USER>\Desktop\\test.csv", "rb") as data:
     reader = csv.DictReader(data, delimiter=',')
     Domain = []
     for row in reader:
@@ -19,7 +19,7 @@ except IOError:
     createfile.write(headers)
     createfile.close()
 
-driver=webdriver.Edge("C:\\Users\\brd65\\Downloads\\MicrosoftWebDriver.exe")
+driver=webdriver.Edge("C:\\Users\\<USER>\\Downloads\\MicrosoftWebDriver.exe")
 
 driver.set_page_load_timeout(30)
 driver.get("http://cfssupport.sonicwall.com")
